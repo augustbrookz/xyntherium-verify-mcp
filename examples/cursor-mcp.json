@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "xyntherium-verify": {
+      "url": "https://xyntherium.com/mcp",
+      "headers": { "Authorization": "Bearer xyn_live_…" }
+    }
+  }
+}

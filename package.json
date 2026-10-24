@@ -1,0 +1,24 @@
+{
+  "name": "xyntherium-verify-mcp",
+  "version": "1.0.0",
+  "description": "Integration layer for the Xyntherium Verify MCP server (https://xyntherium.com/mcp): install snippets, example agent configs and a tiny client wrapper, so any AI agent can verify an answer against its sources before stating it or acting on it.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./client/xyntherium-verify.mjs"
+  },
+  "files": ["client", "examples", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test client/test.mjs && python3 -c \"import ast,sys; ast.parse(open('client/xyntherium_verify.py').read())\""
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustbrookz/xyntherium-verify-mcp.git"
+  },
+  "homepage": "https://xyntherium.com/mcp",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "verification", "grounding", "hallucination", "claude", "cursor", "agents"]
+}

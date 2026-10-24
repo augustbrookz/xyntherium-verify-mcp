@@ -1,0 +1,10 @@
+{
+  "inputs": [{ "type": "promptString", "id": "xyn-key", "description": "Xyntherium API key", "password": true }],
+  "servers": {
+    "xyntherium-verify": {
+      "type": "http",
+      "url": "https://xyntherium.com/mcp",
+      "headers": { "Authorization": "Bearer ${input:xyn-key}" }
+    }
+  }
+}
