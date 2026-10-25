@@ -2,7 +2,7 @@
   "mcpServers": {
     "xyntherium-verify": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://xyntherium.com/mcp", "--header", "Authorization: Bearer ${XYN_API_KEY}"],
+      "args": ["-y", "mcp-remote", "https://www.xyntherium.com/mcp", "--header", "Authorization: Bearer ${XYN_API_KEY}"],
       "env": { "XYN_API_KEY": "xyn_live_…" }
     }
   }

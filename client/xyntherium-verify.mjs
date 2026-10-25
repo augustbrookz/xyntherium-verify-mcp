@@ -28,7 +28,7 @@ export class XyntheriumVerify {
   #fetch;
   #id = 0;
 
-  constructor({ apiKey, url = 'https://xyntherium.com/mcp', fetch: fetchImpl = globalThis.fetch } = {}) {
+  constructor({ apiKey, url = 'https://www.xyntherium.com/mcp', fetch: fetchImpl = globalThis.fetch } = {}) {
     if (!apiKey) throw new XyntheriumVerifyError('apiKey is required (https://xyntherium.com/account/api-keys)', { code: 'no_key' });
     this.#apiKey = apiKey;
     this.#url = url;

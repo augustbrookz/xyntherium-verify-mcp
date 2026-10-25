@@ -3,7 +3,7 @@
   "servers": {
     "xyntherium-verify": {
       "type": "http",
-      "url": "https://xyntherium.com/mcp",
+      "url": "https://www.xyntherium.com/mcp",
       "headers": { "Authorization": "Bearer ${input:xyn-key}" }
     }
   }

@@ -2,7 +2,7 @@
 
 Let any AI agent verify an answer against its sources **before** it states a fact or takes an action.
 
-Two tools, hosted at `https://xyntherium.com/mcp` (Streamable HTTP, bearer auth):
+Two tools, hosted at `https://www.xyntherium.com/mcp` (Streamable HTTP, bearer auth; use the `www.` address, the bare domain currently redirects and a redirect drops the key):
 
 | Tool | Input | What comes back |
 |---|---|---|
@@ -20,7 +20,7 @@ Get an API key at **https://xyntherium.com/account/api-keys** (free: 1,000 check
 ### Claude Code
 
 ```bash
-claude mcp add --transport http xyntherium-verify https://xyntherium.com/mcp \
+claude mcp add --transport http xyntherium-verify https://www.xyntherium.com/mcp \
   --header "Authorization: Bearer $XYN_API_KEY"
 ```
 
@@ -35,14 +35,14 @@ Settings → Developer → Edit config (`claude_desktop_config.json`), through t
   "mcpServers": {
     "xyntherium-verify": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://xyntherium.com/mcp", "--header", "Authorization: Bearer ${XYN_API_KEY}"],
+      "args": ["-y", "mcp-remote", "https://www.xyntherium.com/mcp", "--header", "Authorization: Bearer ${XYN_API_KEY}"],
       "env": { "XYN_API_KEY": "xyn_live_…" }
     }
   }
 }
 ```
 
-Or Settings → Connectors → Add custom connector with `https://xyntherium.com/mcp` and no key: Claude sends you to Xyntherium to sign in and approve access (OAuth, 90 days).
+Or Settings → Connectors → Add custom connector with `https://www.xyntherium.com/mcp` and no key: Claude sends you to Xyntherium to sign in and approve access (OAuth, 90 days).
 
 ### Cursor
 
@@ -52,7 +52,7 @@ Or Settings → Connectors → Add custom connector with `https://xyntherium.com
 {
   "mcpServers": {
     "xyntherium-verify": {
-      "url": "https://xyntherium.com/mcp",
+      "url": "https://www.xyntherium.com/mcp",
       "headers": { "Authorization": "Bearer xyn_live_…" }
     }
   }
@@ -65,7 +65,7 @@ Or Settings → Connectors → Add custom connector with `https://xyntherium.com
 
 ### Any other MCP client
 
-URL `https://xyntherium.com/mcp`, header `Authorization: Bearer <key>`, Streamable HTTP, stateless, protocol `2026-07-28` and `2025-11-25` (and `2025-06-18` / `2025-03-26` through `initialize`). Discovery and `tools/list` need no key; every tool call does.
+URL `https://www.xyntherium.com/mcp`, header `Authorization: Bearer <key>`, Streamable HTTP, stateless, protocol `2026-07-28` and `2025-11-25` (and `2025-06-18` / `2025-03-26` through `initialize`). Discovery and `tools/list` need no key; every tool call does.
 
 ## 30-second demo
 
@@ -93,7 +93,7 @@ URL `https://xyntherium.com/mcp`, header `Authorization: Bearer <key>`, Streamab
 From a shell, without any client:
 
 ```bash
-curl -s -X POST https://xyntherium.com/mcp \
+curl -s -X POST https://www.xyntherium.com/mcp \
   -H "Authorization: Bearer $XYN_API_KEY" \
   -H 'content-type: application/json' -H 'accept: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"verify_against_document","arguments":{
@@ -183,7 +183,7 @@ A refused call comes back as a tool error that says which limit was hit and when
 
 ## Links
 
-- Docs and install: https://xyntherium.com/mcp
+- Docs and install: https://www.xyntherium.com/mcp
 - API docs: https://xyntherium.com/docs/api
 - The open engine, Gate, CLI and SDK: https://github.com/augustbrookz/verify-gate
 - Support: support@xyntherium.com

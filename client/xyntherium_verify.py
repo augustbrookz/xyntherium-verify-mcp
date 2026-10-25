@@ -17,7 +17,7 @@ import urllib.error
 import urllib.request
 from typing import Any, Optional
 
-DEFAULT_URL = "https://xyntherium.com/mcp"
+DEFAULT_URL = "https://www.xyntherium.com/mcp"
 
 
 class XyntheriumVerifyError(Exception):
